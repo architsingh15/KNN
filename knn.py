@@ -1,4 +1,4 @@
-# Example of kNN implemented from Scratch in Python
+# kNN implemented from Scratch in Python
 
 import csv
 import random
@@ -55,14 +55,14 @@ def getAccuracy(testSet, predictions):
 	return (correct/float(len(testSet))) * 100.0
 	
 def main():
-	# prepare data
+	# prepare the data, load data set 
 	trainingSet=[]
 	testSet=[]
 	split = 0.67
 	loadDataset('iris.data', split, trainingSet, testSet)
 	print 'Train set: ' + repr(len(trainingSet))
 	print 'Test set: ' + repr(len(testSet))
-	# generate predictions
+	# generate predictions on the data set 
 	predictions=[]
 	k = 3
 	for x in range(len(testSet)):
